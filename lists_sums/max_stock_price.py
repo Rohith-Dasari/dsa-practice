@@ -15,13 +15,18 @@ def maxSubArray(nums: list[int]) -> int:
         best=max(current,best)
     return best
 
-def best_time_to_sell_stock(nums:list):
-    best=nums[0]
-    curr=nums[0]
-    for num in nums[1:]:
-        curr=max(num,curr+num)
-        best=max(best,curr)
-    return best if best>0  else 0
+def best_time_to_sell_stock(prices):
+    min_price = float("inf")
+    max_profit = 0
+
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        else:
+            max_profit = max(max_profit, price - min_price)
+
+    return max_profit
+
 
 print(maxSubArray([1,2,-1,4,-3]))
 print(best_time_to_sell_stock([-1,-2,-1,-4,-3]))
