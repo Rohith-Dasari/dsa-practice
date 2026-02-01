@@ -1,9 +1,10 @@
 #REQUIREMENTS
 #given an array of integers
-#find 2 points - when to buy and sell
+#find max possible profit
 
 #approach
 #max +ve diff 
+#find min price and update max profit according to the next profit  it gained
 
 arr=[1,-3,5,7,9]
 #maximum subarray sum
