@@ -3,7 +3,7 @@ anagram_list=["abt","tab","eat","ate","bat"]
 
 def group_anagram(al:list[str])->list[tuple[str]]:
     a_map={}
-    for word in anagram_list:
+    for word in al:
         key="".join(sorted(word))
         if key in a_map.keys():
          a_map[key].append(word)
@@ -16,7 +16,7 @@ def group_anagram(al:list[str])->list[tuple[str]]:
         result.append(group)
     return result
 print(group_anagram(anagram_list))
-    
+
         
         
         

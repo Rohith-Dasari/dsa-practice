@@ -1,5 +1,5 @@
 
-def removeOuterParentheses(self, s: str) -> str:
+def removeOuterParentheses(s: str) -> str:
     
     # stack=[]
     depth=0
