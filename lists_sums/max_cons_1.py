@@ -11,5 +11,4 @@ class Solution:
                 max_len=streak
         return max_len
 
-            
         
